@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+	Главная
+{% endblock %}
+
+{% block header %}
+	<a href="{% url 'logging' %}">Войти</a>
+	<a href="{% url 'registration' %}">Регистрация</a>
+	<a href="{% url 'breaking_news' %}">Последние новости</a>
+{% endblock %}
+		
+{% block content %}
+	{% for el in articles %}
+		<center>
+			<h1>{{el.title}}</h1><br>
+			<p>{{el.text}}</p><br>
+			<div class="datetime">
+				дата публикации: {{el.publication_date}}<br>
+			</div>
+			<div class="datetime">
+				дата изменения: {{el.date_of_change}}<br>
+			</div>
+		</center>
+	{% endfor %} 
+{% endblock %}

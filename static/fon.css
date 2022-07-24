@@ -1,0 +1,70 @@
+body {
+
+background-image: url(../media/fon.png);
+
+background-repeat: no-repeat;
+
+background-position: center center;
+
+background-attachment: fixed;
+
+-webkit-background-size: cover;
+
+-moz-background-size: cover;
+
+-o-background-size: cover;
+
+background-size: cover;
+
+}
+
+h1 { color: #ffffff;
+	font-family: ‘Lato’, sans-serif;
+	font-size: 40px;
+	font-weight: 300;
+	line-height: 58px;
+	margin: 0 0 58px;
+	background-color: hsla(0,0%,0%, 1.0);
+	margin-bottom: -15px;
+}
+
+p {
+	color: white;
+	font-family: ‘Lucida Sans’, Arial, sans-serif;
+	font-size: 18px;
+	line-height: 26px;
+	text-indent: 30px;
+	margin: 0;
+	background-color: hsla(0,0%,0%, 1.0);
+}
+
+a {
+	color: #fe921f;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #ffffff
+}
+
+.datetime {
+	background: #fe921f;
+	color: #ffffff;
+	display: inline-block;
+	font-family: ‘Lato’, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 12px;
+	letter-spacing: 1px;
+	margin: 0 0 30px;
+	padding: 10px 15px 8px;
+	text-transform: uppercase; 
+}
+
+.content {
+	width: 700px;
+	background-color: transparent;
+	position: relative;
+	left: 600px;
+}
+

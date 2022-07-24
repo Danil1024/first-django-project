@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+	Свежие новости
+{% endblock %}
+
+{% block header %}
+	<a href="{% url 'news_page' %}">Главная</a>
+	<a href="{% url 'logout_user' %}">Выйти</a>
+{% endblock %}
+		
+{% block content %}
+	{% for el in lasts_articles %}
+		<center>
+			<h1>{{el.title}}</h1><br>
+			<p>{{el.text}}</p><br>
+			<div class="datetime">
+				дата публикации: {{el.publication_date}}<br>
+			</div>
+			<div class="datetime">
+				дата изменения: {{el.date_of_change}}<br>
+			</div>
+		</center>
+	{% endfor %} 
+{% endblock %}

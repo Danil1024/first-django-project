@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>
+		{% block title %}
+
+		{% endblock %}
+	</title>
+	<link rel="stylesheet" href="{% static 'fon.css'%}" type="text/css">
+</head>
+<body>
+	<div class="header">
+		{% block header %}
+
+    	{% endblock %}
+	</div>
+	<div class="content">
+		{% block content %}
+    	
+    	{% endblock %}
+	</div>
+</body>
+</html>
