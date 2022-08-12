@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'news_page'
+    'news_page',
+    'castom_user'
 ]
 
 MIDDLEWARE = [
@@ -127,7 +128,6 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
-AUTH_USER_MODEL = 'news_page.MyUser'
 
 LOGIN_REDIRECT_URL = reverse_lazy('breaking_news')
 LOGOUT_REDIRECT_URL = reverse_lazy('news_page')
