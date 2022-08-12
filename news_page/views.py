@@ -1,15 +1,11 @@
-from django.shortcuts import render
-from django.http import HttpResponseRedirect, HttpResponse
 from datetime import timedelta
 from django.utils import timezone
 from .forms import *
 from .models import *
-from django.contrib.auth import login, logout
 from django.views.generic import ListView
 from django.views.generic.edit import CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
-from django.shortcuts import redirect
 from django.contrib.auth.views import LoginView, LogoutView
 from django.contrib.auth.forms import AuthenticationForm
 
