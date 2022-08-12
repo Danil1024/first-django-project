@@ -68,3 +68,13 @@ a:hover {
 	left: 600px;
 }
 
+.errorlist li{
+	color: red;
+	font-family: ‘Lucida Sans’, Arial, sans-serif;
+	font-size: 15px;
+	line-height: 26px;
+	text-indent: 30px;
+	margin: 0;
+	background-color: hsla(0,0%,0%, 1.0);
+}
+

@@ -1,11 +1,10 @@
 from django.urls import path
-from django.contrib.auth.decorators import login_required
-from .views import News_page, logging, registration, Breaking_news, logout_user
+from .views import News_page, Login, Registration, Breaking_news, Logout
 
 urlpatterns = [
 	path('', News_page.as_view(), name='news_page'),
-	path('logging/', logging, name='logging'),
-	path('registration/', registration, name='registration'),
-	path('breaking_news/', login_required(Breaking_news.as_view(), login_url='/news_page/logging/'), name='breaking_news'),
-	path('logout_user/', logout_user, name='logout_user')
+	path('logging/', Login.as_view(), name='logging'),
+	path('registration/', Registration.as_view(), name='registration'),
+	path('breaking_news/', Breaking_news.as_view(), name='breaking_news'),
+	path('logout_user/', Logout.as_view(), name='logout_user')
 ] 
