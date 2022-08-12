@@ -1,11 +1,6 @@
 from django.db import models
 from django.utils import timezone
 from datetime import timedelta
-from django.contrib.auth.models import AbstractUser
-
-
-class MyUser(AbstractUser):
-    pass
 
 
 class Сategory(models.Model):
@@ -22,7 +17,7 @@ class Сategory(models.Model):
 class Article(models.Model):
 	title = models.CharField('Заголовок', max_length=50, null=False, blank=False)
 	text = models.TextField('Содержание', null=False, blank=False)
-	publication_date = models.DateTimeField('Дата побликации', default=timezone.now)
+	publication_date = models.DateTimeField('Дата публикации', auto_now_add=True)
 	date_of_change = models.DateTimeField('Дата изменения', default=timezone.now)
 	cat = models.ForeignKey( Сategory, verbose_name='Категория', on_delete=models.SET_NULL, null = True)
 
